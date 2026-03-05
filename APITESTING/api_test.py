@@ -6,7 +6,7 @@ BASE_URL = "http://localhost:5000/activities"
 def test_get_all():
     r = requests.get(BASE_URL)
     print(r.json())
-    assert r.status_code == 200
+    assert r.status_code == 201
     assert isinstance(r.json(), list)
 
 def test_post_activity():
