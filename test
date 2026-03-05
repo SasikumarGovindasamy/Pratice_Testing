@@ -1,0 +1,8 @@
+File handling in Python allows programs to create, read, update, and delete files, making it essential for data storage
+and manipulation. Using built‑in functions like open(), developers can access files in different modes such as read (r),
+write (w), append (a), and read+write (r+). Once a file is opened, operations like reading content, writing data,
+or modifying existing information can be performed easily. Python also provides the with statement, which ensures files
+are automatically closed after use, preventing memory leaks and resource issues. File handling is widely used in
+applications such as logging, data analysis, configuration management, and automation, making it a fundamental
+concept for efficient program
+execution.Hello ready to learn pythonHello ready to learn python
