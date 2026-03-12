@@ -28,7 +28,7 @@ def test_put_activity():
     r = requests.put(f"{BASE_URL}/1", json=payload)
     print(r.json())
     test_get_all()
-    assert r.status_code == 200
+    assert r.status_code == 201
     assert r.json()["title"] == "Updated Activity"
 
 def test_delete_activity():
