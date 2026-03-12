@@ -1,0 +1,34 @@
+name: Python API CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: List repo files
+        run: ls -R
+
+      - name: Install dependencies
+        run: pip install -r APITESTING/requirements.txt
+
+      - name: Start API server
+        run: |
+          nohup python APITESTING/app.py &
+          sleep 10
+
+      - name: Run API tests
+        run: pytest APITESTING/api_test.py

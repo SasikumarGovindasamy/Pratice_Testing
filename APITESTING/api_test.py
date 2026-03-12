@@ -14,7 +14,7 @@ def test_post_activity():
     r = requests.post(BASE_URL, json=payload)
     print(r.json())
     test_get_all()
-    assert r.status_code == 200
+    assert r.status_code == 201
     assert r.json()["title"] == "New Activity"
 
 def test_get_by_id():
