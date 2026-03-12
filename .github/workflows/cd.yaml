@@ -23,12 +23,12 @@ jobs:
         run: ls -R
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install -r APITESTING/requirements.txt
 
       - name: Start API server
         run: |
-          nohup python app.py &
+          nohup python APITESTING/app.py &
           sleep 10
 
       - name: Run API tests
-        run: pytest api_test.py
+        run: pytest APITESTING/api_test.py
